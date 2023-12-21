@@ -1,0 +1,491 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+/* 
+9. Declaration of Variables
+*/
+:root {
+  --color-1: #ffffff;
+  --color-2: #646e7a;
+  --bg-color-1: #f5f8fa;
+  --bg-color-2: #038e7d;
+  --bg-color-3: #1179bf;
+  --text-color-1: #1d2c3c;
+}
+
+body {
+  font-family: "Lato", "Helvetica", "sans-serif";
+}
+
+.container {
+  background-color: var(--bg-color-1);
+  width: 100%;
+  max-width: 100%;
+  height: 1170px;
+  padding-block-start: 28px;
+  padding-inline: 40px;
+}
+
+header {
+  height: 73px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  border-block-end: 2px solid #e0e6ea;
+}
+
+#wp-pusher-logo {
+  width: 200px;
+  height: 39px;
+}
+
+nav {
+  height: 73px;
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+
+nav > ul > li > a {
+  color: var(--text-color-1);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.button {
+  width: 100px;
+  height: 30px;
+  background-color: var(--bg-color-1);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding-inline: 19px;
+  padding-block: 12px;
+  margin: 2px;
+}
+
+.button:hover {
+  border: 2px solid var(--color-2);
+}
+
+.button:focus {
+  outline: none;
+  border: 2px solid var(--color-2);
+}
+
+main {
+  width: 892px;
+  height: 795px;
+  margin: 85px auto 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  box-shadow: 0px 5px 15px 0px #0000000D;
+  box-shadow: 0px 15px 35px 0px #2B404E18;
+}
+
+#left-section {
+  background-color: var(--color-1);
+  color: var(--text-color-1);
+  border-radius: 3px 0 0 6px; 
+}
+
+.form-header {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  height: 80px;
+  width: 100%;
+  text-shadow: 0px 4px 4px #00000040;
+  padding-inline-start: 48px;
+  padding-block: 41px 78px;
+  border-block-end: 2px solid #f5f7fa;
+}
+
+.basic-info {
+  margin-block-start: 34px;
+  padding-inline-start: 48px;
+  padding-block-end: 41px;
+  border-block-end: 2px solid #f5f7fa;
+}
+
+.basic-info-header {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+}
+
+.number {
+  display: inline-block;
+  color: #548bc5;
+  border: 2px solid #548bc5;
+  width: 32px;
+  height: 32px;
+  padding-block-start: 3px;
+  border-radius: 50%;
+  text-align: center;
+  margin-inline-end: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+
+.form-line {
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+}
+
+input {
+  display: block;
+  width: 227px;
+  height: 36px;
+  background-color: #edeff2;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  margin-block-start: 7px;
+  /* Text Alignment */
+  padding-inline-start: 12px;
+  padding-block-end: 4px;
+}
+
+::placeholder {
+  color: var(--color-2);
+}
+
+.first-name {
+  margin-block-start: 9px;
+}
+
+.last-name {
+  margin-block-start: 9px;
+}
+
+#email {
+  width: 370px;
+}
+
+.email {
+  margin-block-start: 15px;
+}
+
+input:hover {
+  border: 1px solid var(--color-2);
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--color-2);
+}
+
+.payment-info {
+  margin-block-start: 34px;
+  padding-inline-start: 48px;
+  padding-block-end: 41px;
+  border-block-end: 2px solid #f5f7fa;
+}
+
+.payment-info-header {
+  margin-block-start: 33px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+}
+
+#card-no {
+  width: 482.5px;
+}
+
+.card-no {
+  margin-block-start: 21px;
+}
+
+.submit-area {
+  margin-block-start: 39px;
+  padding-inline-start: 48px;
+}
+
+input[type="submit"] {
+  width: 483px;
+  height: 52px;
+  color: var(--color-1);
+  background-color: var(--bg-color-2);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  text-align: center;
+  padding-inline: 0px;
+  padding-block: 0px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  border: none;
+}
+
+input[type="submit"]:focus {
+  outline: auto;
+  border: none;
+}
+
+.question-mark {
+  width: 25px;
+  height: 25px;
+  padding-block-start: 3px;
+}
+
+.contact-support {
+  margin: 23px 0 0 72px;
+  font-size: 14px;
+  line-height: 16.8px;
+}
+
+span.cs-text {
+  color: var(--color-2);
+}
+
+b.question {
+  color: var(--text-color-1);
+}
+
+span.contact {
+  text-decoration: underline;
+}
+
+span.support {
+  display: block;
+  padding-inline-start: 35px;
+}
+
+#powered-by-stripe {
+  width: 92px;
+  height: 20.1px;
+  margin: 17px auto 0 240px;
+}
+
+#right-section {
+  background-color: var(--bg-color-3);
+  color: var(--color-1);
+  padding-block-start: 42px;
+  padding-inline: 44px 37px;
+  border-radius: 0 6px 6px 0;
+}
+
+.first-section {
+  margin-block-end: 36px;
+}
+
+.section-header {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.price {
+  height: 72px;
+  margin-block-end: 5px;
+}
+
+p sup {
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  top: -15px;
+}
+
+p > span.figure{
+  font-size: 60px;
+  font-weight: 300;
+}
+
+p > sub.slash {
+  font-size: 18px;
+  font-weight: 700;
+  position: relative;
+  top: -5px;
+}
+
+p > sub.year {
+  font-family: "roboto", "Helvetica", "sans-serif"; 
+  font-size: 12px;
+  font-weight: 400;
+  position: relative;
+  top: -5px;
+}
+
+.price-info {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  font-style: italic;
+}
+
+.second-section {
+  margin-block-end: 38px;
+}
+
+.second-section > ul {
+  list-style: none;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.second-section > ul > li {
+  text-align: left;
+  position: relative;
+  left: -36px;
+}
+
+.second-section > ul > li::before {
+  display: inline;
+  content: url(./images/marker-ul.svg);
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 4px;
+  left: -5px;
+} 
+
+.third-section {
+  padding-block-end: 42px;
+  border-block-end: 2px solid var(--color-1);
+}
+
+.third-section > .switch-ad {
+  font-size: 16px;
+  line-height: 19.2px;
+}
+
+.third-section > .switch-ad > b {
+  font-weight: 700;
+}
+
+.third-section > .switch-ad > a {
+  font-weight: 700;
+  color: inherit;
+}
+
+.last-section {
+  margin-block-start: 43px;
+}
+
+.last-section > .quote {
+  font-size: 18px;
+  line-height: 24px;
+  font-style: italic;
+  margin-block-end: 27px;
+}
+
+.last-section > .author {
+  display: flex;
+}
+
+.last-section > .author > img {
+  width: 40px;
+  height: 40px;
+}
+
+.last-section > .author > .author-name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+  margin-inline-start: 14px;
+  align-self: center;
+}
+
+
+
+
+
+
+
+
+footer {
+  margin-block: 33px 189px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+}
+
+span.date {
+  color: #636b6f;
+}
+
+span.terms {
+  color: #31708f;
+}
